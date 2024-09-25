@@ -16,7 +16,7 @@ if uploaded_file is not None:
     if st.button('Transcribe'):
         files = {'file': uploaded_file.getvalue()}
         # Ensure the FastAPI app is running at this address
-        response = requests.post("http://44.211.66.81/:8000/transcribe/", files=files)
+        response = requests.post("http://44.211.66.81:8000/transcribe/", files=files)
         result = response.json()
 
         if response.status_code == 200:
